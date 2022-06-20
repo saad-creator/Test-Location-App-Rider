@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Sa-uo-Gkd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestLocationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fyS-uB-T1J">
+                                <rect key="frame" x="0.0" y="200" width="414" height="696"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJH-zz-Qze">
+                                <rect key="frame" x="306" y="148" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5Qf-dt-dY7"/>
+                                    <constraint firstAttribute="height" constant="40" id="ADS-NG-2AA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="GoogleMaps"/>
+                                <connections>
+                                    <action selector="goToGoogleMapsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYb-Hx-lir"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tJH-zz-Qze" secondAttribute="trailing" constant="8" id="RVZ-3C-izo"/>
+                            <constraint firstAttribute="bottom" secondItem="fyS-uB-T1J" secondAttribute="bottom" id="W0T-p5-JiB"/>
+                            <constraint firstItem="fyS-uB-T1J" firstAttribute="top" secondItem="tJH-zz-Qze" secondAttribute="bottom" constant="12" id="bPf-6i-y0l"/>
+                            <constraint firstItem="tJH-zz-Qze" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="cfq-gX-4Al"/>
+                            <constraint firstItem="fyS-uB-T1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v7B-at-pNS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fyS-uB-T1J" secondAttribute="trailing" id="yUm-I7-UQ6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GiI-H7-Ek5"/>
+                    <connections>
+                        <outlet property="mapView" destination="fyS-uB-T1J" id="WS2-Xe-3Hn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="114.50892857142857"/>
+        </scene>
+        <!--Google Maps View Controller-->
+        <scene sceneID="vOr-K8-KrX">
+            <objects>
+                <viewController storyboardIdentifier="GoogleMapsViewController" id="r8x-H6-49B" customClass="GoogleMapsViewController" customModule="TestLocationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BPw-qW-Nd4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3U-Wa-XgS" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VVt-sx-11r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e3U-Wa-XgS" firstAttribute="top" secondItem="VVt-sx-11r" secondAttribute="top" id="0YH-Wq-mdJ"/>
+                            <constraint firstAttribute="bottom" secondItem="e3U-Wa-XgS" secondAttribute="bottom" id="RFT-lb-dZj"/>
+                            <constraint firstItem="VVt-sx-11r" firstAttribute="trailing" secondItem="e3U-Wa-XgS" secondAttribute="trailing" id="Tev-Il-kEs"/>
+                            <constraint firstItem="e3U-Wa-XgS" firstAttribute="leading" secondItem="VVt-sx-11r" secondAttribute="leading" id="cfu-zH-ywP"/>
+                            <constraint firstItem="e3U-Wa-XgS" firstAttribute="top" secondItem="BPw-qW-Nd4" secondAttribute="top" id="xfS-jb-NEA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0YH-Wq-mdJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="e3U-Wa-XgS" id="69j-Vg-sJN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSn-ve-c5L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="786.83035714285711"/>
+        </scene>
+        <!--Draw Polyline View Controller-->
+        <scene sceneID="ykT-cK-ecD">
+            <objects>
+                <viewController storyboardIdentifier="DrawPolylineViewController" id="Zra-W8-dXx" customClass="DrawPolylineViewController" customModule="TestLocationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pNe-jp-LvP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jnB-Qt-cax">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2SN-RQ-3QQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jnB-Qt-cax" firstAttribute="leading" secondItem="2SN-RQ-3QQ" secondAttribute="leading" id="AQu-uf-8YJ"/>
+                            <constraint firstItem="jnB-Qt-cax" firstAttribute="top" secondItem="2SN-RQ-3QQ" secondAttribute="top" id="AZe-fH-rjk"/>
+                            <constraint firstItem="2SN-RQ-3QQ" firstAttribute="trailing" secondItem="jnB-Qt-cax" secondAttribute="trailing" id="IgQ-T2-YiS"/>
+                            <constraint firstItem="2SN-RQ-3QQ" firstAttribute="bottom" secondItem="jnB-Qt-cax" secondAttribute="bottom" id="JPa-8c-Hqe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="jnB-Qt-cax" id="yei-re-2lW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2w-5R-XMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852.1739130434785" y="114.50892857142857"/>
+        </scene>
+        <!--Redraw Polyline View Controller-->
+        <scene sceneID="3pN-tb-uM1">
+            <objects>
+                <viewController storyboardIdentifier="RedrawPolylineViewController" id="K28-wJ-qNw" customClass="RedrawPolylineViewController" customModule="TestLocationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="unG-jV-XA5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7DO-qm-mUx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kQg-un-Sao"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7DO-qm-mUx" firstAttribute="top" secondItem="kQg-un-Sao" secondAttribute="top" id="6KL-fx-klZ"/>
+                            <constraint firstItem="kQg-un-Sao" firstAttribute="trailing" secondItem="7DO-qm-mUx" secondAttribute="trailing" id="NfD-Za-a4h"/>
+                            <constraint firstItem="kQg-un-Sao" firstAttribute="bottom" secondItem="7DO-qm-mUx" secondAttribute="bottom" id="RCV-vF-Edd"/>
+                            <constraint firstItem="7DO-qm-mUx" firstAttribute="leading" secondItem="kQg-un-Sao" secondAttribute="leading" id="gfH-sF-EPT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="7DO-qm-mUx" id="uvO-mE-HUp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LHF-bd-obA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2586.9565217391305" y="114.50892857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nwR-cH-0S8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Sa-uo-Gkd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="x6P-fK-6bL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wUW-SH-1fd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjo-wB-afS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
