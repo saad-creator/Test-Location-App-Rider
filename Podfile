@@ -10,6 +10,6 @@ target 'TestLocationApp' do
   pod 'Alamofire'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SCLAlertView'
-
-
+  pod 'Firebase'
+  pod 'Firebase/Database'
 end

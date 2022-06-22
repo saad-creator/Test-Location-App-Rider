@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		187651A6285B02D0002CBB97 /* DrawPolylineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187651A5285B02D0002CBB97 /* DrawPolylineViewController.swift */; };
+		189FE4DE2860EFE700CAA1B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189FE4DD2860EFE700CAA1B3 /* GoogleService-Info.plist */; };
 		18CC78442859CCC70097AC68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC78432859CCC70097AC68 /* AppDelegate.swift */; };
 		18CC78462859CCC70097AC68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC78452859CCC70097AC68 /* SceneDelegate.swift */; };
 		18CC78482859CCC70097AC68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC78472859CCC70097AC68 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		187651A5285B02D0002CBB97 /* DrawPolylineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawPolylineViewController.swift; sourceTree = "<group>"; };
+		189FE4DD2860EFE700CAA1B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18CC78402859CCC70097AC68 /* TestLocationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLocationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CC78432859CCC70097AC68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18CC78452859CCC70097AC68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		18CC78422859CCC70097AC68 /* TestLocationApp */ = {
 			isa = PBXGroup;
 			children = (
+				189FE4DD2860EFE700CAA1B3 /* GoogleService-Info.plist */,
 				187651A1285A156A002CBB97 /* Utilities */,
 				187651A2285A1577002CBB97 /* Model */,
 				187651A3285A157D002CBB97 /* View */,
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CC78502859CCCA0097AC68 /* LaunchScreen.storyboard in Resources */,
+				189FE4DE2860EFE700CAA1B3 /* GoogleService-Info.plist in Resources */,
 				18CC784D2859CCCA0097AC68 /* Assets.xcassets in Resources */,
 				18CC784B2859CCC70097AC68 /* Main.storyboard in Resources */,
 			);

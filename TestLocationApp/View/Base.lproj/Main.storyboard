@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Sa-uo-Gkd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Sa-uo-Gkd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,22 +63,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3U-Wa-XgS" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="802"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWX-Io-qje">
+                                <rect key="frame" x="132" y="814" width="150" height="40"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="W0b-mD-Jzb"/>
+                                    <constraint firstAttribute="width" constant="150" id="v6r-Is-fcR"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Save to Firebae">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveLocationToFirebase:" destination="r8x-H6-49B" eventType="touchUpInside" id="gvl-WX-Arp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VVt-sx-11r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="e3U-Wa-XgS" firstAttribute="top" secondItem="VVt-sx-11r" secondAttribute="top" id="0YH-Wq-mdJ"/>
-                            <constraint firstAttribute="bottom" secondItem="e3U-Wa-XgS" secondAttribute="bottom" id="RFT-lb-dZj"/>
+                            <constraint firstItem="MWX-Io-qje" firstAttribute="centerX" secondItem="VVt-sx-11r" secondAttribute="centerX" id="Fk0-1o-ndZ"/>
+                            <constraint firstItem="VVt-sx-11r" firstAttribute="bottom" secondItem="e3U-Wa-XgS" secondAttribute="bottom" constant="-34" id="RFT-lb-dZj"/>
                             <constraint firstItem="VVt-sx-11r" firstAttribute="trailing" secondItem="e3U-Wa-XgS" secondAttribute="trailing" id="Tev-Il-kEs"/>
                             <constraint firstItem="e3U-Wa-XgS" firstAttribute="leading" secondItem="VVt-sx-11r" secondAttribute="leading" id="cfu-zH-ywP"/>
+                            <constraint firstItem="VVt-sx-11r" firstAttribute="bottom" secondItem="MWX-Io-qje" secondAttribute="bottom" constant="8" id="iWt-eA-MJV"/>
+                            <constraint firstItem="MWX-Io-qje" firstAttribute="top" secondItem="e3U-Wa-XgS" secondAttribute="bottom" constant="12" id="mKX-Lm-EKf"/>
                             <constraint firstItem="e3U-Wa-XgS" firstAttribute="top" secondItem="BPw-qW-Nd4" secondAttribute="top" id="xfS-jb-NEA"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="0YH-Wq-mdJ"/>
+                                <exclude reference="RFT-lb-dZj"/>
                             </mask>
                         </variation>
                     </view>
@@ -170,6 +194,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

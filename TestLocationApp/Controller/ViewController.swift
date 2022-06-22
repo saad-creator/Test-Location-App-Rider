@@ -19,7 +19,6 @@ class ViewController: UIViewController {
 
     //MARK: - IBOutlets
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet weak var mapView2: MKMapView!
         
     //MARK: - Properties
     var locationManager: CLLocationManager!
