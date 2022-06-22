@@ -65,13 +65,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		187651A2285A1577002CBB97 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		187651A3285A157D002CBB97 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +108,6 @@
 			children = (
 				189FE4DD2860EFE700CAA1B3 /* GoogleService-Info.plist */,
 				187651A1285A156A002CBB97 /* Utilities */,
-				187651A2285A1577002CBB97 /* Model */,
 				187651A3285A157D002CBB97 /* View */,
 				187651A4285A1583002CBB97 /* Controller */,
 				18CC784C2859CCCA0097AC68 /* Assets.xcassets */,
